@@ -5,7 +5,7 @@ In this exercise you will explore how memory management and garbage collection w
 You will learn:
 
 - Why unmanaged resources (like file handles) need explicit cleanup.
-- How to implement the IDisposable pattern.
+- How to implement the IDisposable interface.
 - How finalizers (~ClassName) interact with the garbage collector.
 - Why using is safer than relying on the garbage collector.
 
@@ -22,20 +22,20 @@ You will learn:
 In *FileWriter.cs*
 
 1. Implement the IDisposable interface
-  - Dispose the StreamWriter and FileStream
-  - Print *"File writer disposed"* to console when clean up happens
+    - Dispose the StreamWriter and FileStream
+    - Print *"File writer disposed"* to console when clean up happens
 
 2. Add a finalizer
-  - Log "FileWriter finalizer called" to the console when it runs.
+    - Log "FileWriter finalizer called" to the console when it runs.
 
 3. From the finalizer, call `Dispose()` if the resources weren’t already disposed.
 
 In *Program.cs*
 
 1. Dispose the FileWriter
-  - First try calling `Dispose()` manually.
-  - Try replacing with `using` statement.
-  - Try replacing with `using` declaration.
+    - First try calling `Dispose()` manually.
+    - Try replacing with `using` statement.
+    - Try replacing with `using` declaration.
 
 ## Think About
 
