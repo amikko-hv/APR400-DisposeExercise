@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using APR400_DisposeExercise;
+﻿using APR400_DisposeExercise;
 
 Console.WriteLine("Starting program...");
 
