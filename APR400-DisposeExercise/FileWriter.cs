@@ -1,5 +1,10 @@
 namespace APR400_DisposeExercise;
 
+// TODO:
+// 1. Implement IDisposable properly so that the file handle is released.
+// 2. Add a finalizer and log to console when it runs
+// 3. Dispose from the finalizer if the resources aren't disposed
+
 public class FileWriter
 {
     private FileStream _stream;
@@ -18,9 +23,4 @@ public class FileWriter
         _writer.Flush();
         Console.WriteLine($"Wrote: {message}");
     }
-
-    // TODO:
-    // 1. Implement IDisposable properly so that the file handle is released.
-    // 2. Add a finalizer (~FileWriter) to see when the GC runs it.
-    // 3. (Optional) Follow the "dispose pattern" for future-proofing.
 }
